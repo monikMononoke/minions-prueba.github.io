@@ -21,7 +21,6 @@ body {
   margin: 0;
   padding: 0;
   cursor: none;
-  overflow-x: hidden;
 }
 
 .cursor {
@@ -41,23 +40,24 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 97;
   padding-top: 20px;
   background-color: white;
-  width: 100vw;
+  width: 100%;
+  margin: 0;
 }
 
 .div-logo {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .menu__icon {
   position: absolute;
-  right: 1rem;
+  right: 3rem;
   top: 1.8rem;
 }
 
@@ -89,12 +89,14 @@ h1 span {
 }
 
 .div-hero-image {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   z-index: 10;
   top: 150px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .hero-image {
@@ -105,7 +107,7 @@ h1 span {
 .rubik-h1 {
   color: var(--minion-color);
   font-size: 200px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -121,7 +123,7 @@ h1 span {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
+  top: 0;
   width: 100%;
   background-color: white !important;
   box-shadow: none !important;
@@ -130,8 +132,6 @@ h1 span {
 }
 
 .atropos-inner {
-  padding-right: 50px;
-  padding-left: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -148,15 +148,17 @@ h1 span {
 }
 
 section .minions {
-  width: 100vw;
-  height: 120vh;
+  width: 100%;
+  height: 100vh;
   position: relative;
   padding: 3rem;
+  margin: 0 auto;
 }
 
 .minion {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+  margin: auto;
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-start;
@@ -175,6 +177,7 @@ section .minions {
     #ffe388 0%,
     #eca516 100%
   );
+  clip-path: polygon(0 0, 0 100%, 150% 60%);
 }
 
 .minion-image {
@@ -211,9 +214,14 @@ section .minions {
 #phil h2 {
   color: white;
 }
+#kevin p > span,
+#dave p > span,
+#phil p > span {
+  color: #e79511;
+}
 
 .back-to-top {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
