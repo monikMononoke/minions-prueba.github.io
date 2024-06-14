@@ -139,7 +139,7 @@ h1 span {
 
 /* MAIN CONTENT */
 
-.main {
+main {
   height: auto;
   display: flex;
   flex-direction: column;
