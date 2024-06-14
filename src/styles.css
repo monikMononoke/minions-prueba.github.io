@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,900;1,900&display=swap");
+
+:root {
+  --minion-color: #ecc65d;
+  --font-family: "Rubik", sans-serif;
+}
+
+.rubik-h1 {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  cursor: none;
+  overflow-x: hidden;
+}
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  padding: 1rem;
+  background-color: #4fa0f1;
+  box-shadow: #1e252d 2px 2px -2px;
+  opacity: 0.7;
+  border-radius: 50%;
+  z-index: 99;
+  mix-blend-mode: difference;
+}
+
+.logo-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 97;
+  padding-top: 20px;
+  background-color: white;
+  width: 100vw;
+}
+
+.div-logo {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.menu__icon {
+  position: absolute;
+  right: 1rem;
+  top: 1.8rem;
+}
+
+.bar-1,
+.bar-2,
+.bar-3 {
+  width: 60px;
+  height: 6px;
+  background: var(--minion-color);
+  box-shadow: #aa7122 1px 2px 1px;
+  border-radius: 3px;
+  margin: 4px 0;
+}
+
+.logo {
+  height: 60px;
+}
+
+.icon-menu {
+  width: 50px;
+  height: 50px;
+}
+
+h1 span {
+  color: var(--minion-color);
+  text-shadow: #ab7950 4px 8px 2px;
+  z-index: 1;
+  transform: translateY(-80%);
+}
+
+.div-hero-image {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 10;
+  top: 150px;
+}
+
+.hero-image {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.rubik-h1 {
+  color: var(--minion-color);
+  font-size: 200px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  position: absolute;
+  z-index: 0;
+}
+
+.atropos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  width: 100%;
+  background-color: white !important;
+  box-shadow: none !important;
+  box-shadow: none;
+  height: 100vh;
+}
+
+.atropos-inner {
+  padding-right: 50px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* MAIN CONTENT */
+
+.main {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1600px;
+  overflow-x: hidden;
+}
+
+section .minions {
+  width: 100vw;
+  height: 120vh;
+  position: relative;
+  padding: 3rem;
+}
+
+.minion {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  padding-right: 5%;
+  align-items: center;
+}
+
+#kevin,
+#dave,
+#phil {
+  padding-left: 5%;
+  padding-right: 0;
+  flex-direction: row;
+  background-image: radial-gradient(
+    100% 100% at 20% 50%,
+    #ffe388 0%,
+    #eca516 100%
+  );
+}
+
+.minion-image {
+  height: 500px;
+}
+
+#bob .minion-image,
+#stuart .minion-image,
+#dave .minion-image {
+  height: 400px;
+}
+
+.meet {
+  transform: translateY(-50%);
+}
+
+.meet p span {
+  font-family: var(--font-family);
+  font-size: 32px;
+  color: var(--minion-color);
+  text-shadow: #673302 1px 2px 2px;
+}
+
+.meet h2 {
+  font-family: var(--font-family);
+  font-size: 70px;
+  color: #333;
+  text-shadow: #673302 1px 2px 2px;
+  margin-top: 0;
+}
+
+#kevin h2,
+#dave h2,
+#phil h2 {
+  color: white;
+}
+
+.back-to-top {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+}
+
+.back-to-top-image {
+  height: 150px;
+}
