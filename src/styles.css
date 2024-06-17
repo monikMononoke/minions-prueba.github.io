@@ -139,7 +139,7 @@ h1 span {
 
 /* MAIN CONTENT */
 
-main {
+.main {
   height: auto;
   display: flex;
   flex-direction: column;
@@ -147,51 +147,68 @@ main {
   overflow-x: hidden;
 }
 
-section .minions {
+.minions {
   width: 100%;
-  height: 100vh;
-  position: relative;
-  padding: 3rem;
+  height: 70vh;
   margin: 0 auto;
+  position: relative;
+  overflow: visible;
 }
 
-.minion {
-  height: 100vh;
+.minions::before {
+  content: "";
+  position: absolute;
+  top: -0;
+  left: 0;
   width: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-start;
-  padding-right: 5%;
-  align-items: center;
+  height: 100%;
 }
 
-#kevin,
-#dave,
-#phil {
-  padding-left: 5%;
-  padding-right: 0;
-  flex-direction: row;
+#kevin::before,
+#dave::before,
+#phil::before {
   background-image: radial-gradient(
     100% 100% at 20% 50%,
     #ffe388 0%,
     #eca516 100%
   );
-  clip-path: polygon(0 0, 0 100%, 150% 60%);
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+  z-index: 1;
+}
+
+.minion {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  padding-right: 5%;
+  align-items: center;
+  z-index: 2;
+}
+
+#div-kevin,
+#div-dave,
+#div-phil {
+  padding-left: 5%;
+  padding-right: 0;
+  flex-direction: row;
 }
 
 .minion-image {
   height: 500px;
+  z-index: 94;
+  transform: translateY(20%);
+}
+
+.meet {
+  z-index: 94;
 }
 
 #bob .minion-image,
 #stuart .minion-image,
 #dave .minion-image {
   height: 400px;
-}
-
-.meet {
-  transform: translateY(-50%);
 }
 
 .meet p span {
