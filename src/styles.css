@@ -378,7 +378,7 @@ section.section-rigth {
 
 @keyframes bounce {
   100% {
-    transform: translateY(20vh);
+    transform: translateY(15vh);
   }
 }
 
