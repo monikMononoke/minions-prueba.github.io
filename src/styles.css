@@ -417,7 +417,7 @@ section.section-rigth {
   }
 }
 
-.minion-image.carl {
+.minion-image.stuart {
   height: 700px;
 }
 
@@ -425,8 +425,7 @@ section.section-rigth {
   height: 650px;
 }
 
-.minion-image.bob,
-.minion-image.stuart {
+.minion-image.bob {
   height: 450px;
   margin-right: 0;
 }
@@ -572,7 +571,7 @@ section.section-rigth {
 }
 
 .screenshot.scene-2:hover {
-  animation: animation2 1.5s 1 linear;
+  animation: animation2 1s 1 linear;
 }
 
 @keyframes animation2 {
@@ -636,7 +635,7 @@ section.section-rigth {
 }
 
 .screenshot.scene-4:hover {
-  animation: animation4 1s 1 ease-in-out;
+  animation: animation4 1.5s 1 ease-in-out;
 }
 
 @keyframes animation4 {

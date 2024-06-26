@@ -39,9 +39,9 @@ const menuDesplegado = () => {
     <li data-id="kevin" >KEVIN</a>
     <li data-id="bob" >BOB</a>
     <li data-id="dave">DAVE</a>
-    <li data-id="carl">CARL</a>
-    <li data-id="phil">PHIL</a>
     <li data-id="stuart">STUART</a>
+    <li data-id="phil">PHIL</a>
+    <li data-id="carl">CARL</a>
     </ul>
     </div>
   `;
