@@ -8,135 +8,321 @@
     <title>MINIONS</title>
   </head>
   <body>
-    <!-- MENÚ Y LOGO-->
-    <div class="logo-menu">
-      <div class="div-logo">
-        <img class="logo" src="./images/logo.png" alt="logo-minions" />
-      </div>
-      <div class="menu__icon">
-        <div class="bar-1"></div>
-        <div class="bar-2"></div>
-        <div class="bar-3"></div>
-      </div>
-    </div>
-    <!-- HERO -->
-    <div class="atropos my-atropos">
-      <h1 class="rubik-h1">
-        <span>B</span>
-        <span>E</span>
-        <span>L</span>
-        <span>L</span>
-        <span>O</span>
-      </h1>
-      <div class="atropos-scale">
-        <div class="atropos-rotate">
-          <div class="atropos-inner">
-            <div class="div-hero-image">
-              <img
-                class="hero-image"
-                src="./images/hero-image.png"
-                alt="minions hero image"
-                data-atropos-offset="7"
-              />
+    <section class="wrapper">
+      <!--SECCIÓNES MINIONS-->
+      <main class="main">
+        <!-- MENÚ Y LOGO-->
+        <div class="logo-menu">
+          <div class="div-logo">
+            <img class="logo" src="./images/logo.png" alt="logo-minions" />
+          </div>
+          <div class="menu__icon">
+            <div class="barras">
+              <div class="bar-1"></div>
+              <div class="bar-2"></div>
+              <div class="bar-3"></div>
+            </div>
+            <img src="images/gafotas.png" alt="gafotas" class="hidden-image" />
+          </div>
+        </div>
+        <div class="menu"></div>
+        <!-- HERO -->
+        <div class="atropos my-atropos">
+          <h1 class="rubik-h1">
+            <span>B</span>
+            <span>E</span>
+            <span>L</span>
+            <span>L</span>
+            <span>O</span>
+          </h1>
+          <div class="atropos-scale">
+            <div class="atropos-rotate">
+              <div class="atropos-inner">
+                <div class="div-hero-image">
+                  <img
+                    class="hero-image"
+                    src="./images/hero-image.png"
+                    alt="minions hero image"
+                    data-atropos-offset="7"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!--SECCIÓNES MINIONS-->
-    <main class="main">
-      <section class="minions" id="kevin">
-        <div class="minion" id="div-kevin">
-          <img class="minion-image" src="./images/kevin.png" alt="kevin" />
-          <div class="meet">
-            <p>
-              <span>m</span>
-              <span>e</span>
-              <span>e</span>
-              <span>t</span>
-            </p>
-            <h2>KEVIN</h2>
-          </div>
+        <section class="video">
+          <iframe
+            width="690"
+            height="500"
+            src="https://www.youtube.com/embed/yDsMZn3olFw?si=xr2b4bDtCCTn2A1s"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </section>
+        <div class="texto-video">
+          <p>
+            The Minions are small, yellow, capsule shaped creatures, who have
+            one or two eyes. They bring much of the comedy in the film, and they
+            are known as the scene-stealer of the movie. Frequently, they speak
+            in an incomprehensible language, called Minionese, occasionally
+            switching to English. They are much childish in some ways, yet they
+            seem to be very intelligent in certain aspects.
+          </p>
         </div>
-      </section>
-      <section class="minions" id="bob">
-        <div class="minion" id="div-bob">
-          <img class="minion-image" src="./images/bob.png" alt="bob" />
-          <div class="meet">
-            <p>
-              <span>m</span>
-              <span>e</span>
-              <span>e</span>
-              <span>t</span>
-            </p>
-            <h2>BOB</h2>
+        <section class="minions section-left" id="kevin">
+          <div class="minion left">
+            <img
+              class="minion-image kevin"
+              src="./images/kevin.png"
+              alt="kevin"
+            />
+            <div class="meet meet-kevin">
+              <p>
+                <span>m</span>
+                <span>e</span>
+                <span>e</span>
+                <span>t</span>
+              </p>
+              <h2>KEVIN</h2>
+              <div class="descripcion">
+                <p class="descripcion-p">
+                  Kevin loves to make fun of and tease people or Minions. He
+                  likes playing golf polo and cricket. In the film Minions, he
+                  is the protagonist and leader of the trio in search of a new
+                  master. He truly cares about the well-being of the Minion
+                  tribe.
+                </p>
+              </div>
+              <div class="meet-interview">
+                <img
+                  src="./images/play.svg"
+                  class="play-interview"
+                  alt="ver entrevista minion"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="minions" id="dave">
-        <div class="minion" id="div-dave">
-          <img class="minion-image" src="./images/dave.png" alt="dave" />
-          <div class="meet">
-            <p>
-              <span>m</span>
-              <span>e</span>
-              <span>e</span>
-              <span>t</span>
-            </p>
-            <h2>DAVE</h2>
+        </section>
+        <section class="minions section-right" id="bob">
+          <div class="minion right">
+            <img class="minion-image bob" src="./images/bob.png" alt="bob" />
+            <div class="meet">
+              <p>
+                <span>m</span>
+                <span>e</span>
+                <span>e</span>
+                <span>t</span>
+              </p>
+              <h2>BOB</h2>
+              <div class="descripcion">
+                <p class="descripcion-p">
+                  Bob is a Minion who is more childish and immature than most of
+                  the other Minions. He is described as a "Little Brother" who
+                  finds love in anything and everything, including a rat (who he
+                  named Poochy) he found in a sewer in the Minions film. He also
+                  enjoys bedtime stories and playing with his favorite stuffed
+                  teddy bear, Tim.
+                </p>
+              </div>
+              <div class="meet-interview">
+                <img
+                  src="./images/play-yellow.svg"
+                  class="play-interview"
+                  alt="ver entrevista minion"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="minions" id="carl">
-        <div class="minion" id="div-carl">
-          <img class="minion-image" src="./images/carl-3.png" alt="carl" />
-          <div class="meet">
-            <p>
-              <span>m</span>
-              <span>e</span>
-              <span>e</span>
-              <span>t</span>
-            </p>
-            <h2>CARL</h2>
+        </section>
+
+        <section class="minions section-left" id="dave">
+          <div class="minion left">
+            <img class="minion-image dave" src="./images/dave.png" alt="dave" />
+            <div class="meet">
+              <p>
+                <span>m</span>
+                <span>e</span>
+                <span>e</span>
+                <span>t</span>
+              </p>
+              <h2>DAVE</h2>
+              <div class="descripcion">
+                <p class="descripcion-p">
+                  Bob is a Minion who is more childish and immature than most of
+                  the other Minions. He is described as a "Little Brother" who
+                  finds love in anything and everything, including a rat (who he
+                  named Poochy) he found in a sewer in the Minions film. He also
+                  enjoys bedtime stories and playing with his favorite stuffed
+                  teddy bear, Tim.
+                </p>
+              </div>
+              <div class="meet-interview">
+                <img
+                  src="./images/play.svg"
+                  class="play-interview"
+                  alt="ver entrevista minion"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="minions" id="phil">
-        <div class="minion" id="div-phil">
-          <img class="minion-image" src="./images/phil.png" alt="phil" />
-          <div class="meet">
-            <p>
-              <span>m</span>
-              <span>e</span>
-              <span>e</span>
-              <span>t</span>
-            </p>
-            <h2>PHIL</h2>
+        </section>
+        <section class="minions section-right" id="carl">
+          <div class="minion right">
+            <img
+              class="minion-image carl"
+              src="./images/carl-3.png"
+              alt="carl"
+            />
+            <div class="meet">
+              <p>
+                <span>m</span>
+                <span>e</span>
+                <span>e</span>
+                <span>t</span>
+              </p>
+              <h2>CARL</h2>
+              <div class="descripcion">
+                <p class="descripcion-p">
+                  Bob is a Minion who is more childish and immature than most of
+                  the other Minions. He is described as a "Little Brother" who
+                  finds love in anything and everything, including a rat (who he
+                  named Poochy) he found in a sewer in the Minions film. He also
+                  enjoys bedtime stories and playing with his favorite stuffed
+                  teddy bear, Tim.
+                </p>
+              </div>
+              <div class="meet-interview">
+                <img
+                  src="./images/play-yellow.svg"
+                  class="play-interview"
+                  alt="ver entrevista minion"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="minions" id="stuart">
-        <div class="minion" id="div-stuart">
-          <img class="minion-image" src="./images/stuart-2.png" alt="stuart" />
-          <div class="meet">
-            <p>
-              <span>m</span>
-              <span>e</span>
-              <span>e</span>
-              <span>t</span>
-            </p>
-            <h2>STUART</h2>
+        </section>
+        <section class="minions section-left" id="phil">
+          <div class="minion left">
+            <img class="minion-image phil" src="./images/phil.png" alt="phil" />
+            <div class="meet">
+              <p>
+                <span>m</span>
+                <span>e</span>
+                <span>e</span>
+                <span>t</span>
+              </p>
+              <h2>PHIL</h2>
+              <div class="descripcion">
+                <p class="descripcion-p">
+                  Bob is a Minion who is more childish and immature than most of
+                  the other Minions. He is described as a "Little Brother" who
+                  finds love in anything and everything, including a rat (who he
+                  named Poochy) he found in a sewer in the Minions film. He also
+                  enjoys bedtime stories and playing with his favorite stuffed
+                  teddy bear, Tim.
+                </p>
+              </div>
+              <div class="meet-interview">
+                <img
+                  src="./images/play.svg"
+                  class="play-interview"
+                  alt="ver entrevista minion"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="back-to-top">
-        <img class="back-to-top-image" src="./images/back-to-top.png" alt="" />
-      </div>
-    </footer>
-    <div class="cursor"></div>
+        </section>
+        <section class="minions section-right" id="stuart">
+          <div class="minion right">
+            <img
+              class="minion-image stuart"
+              src="./images/stuart-2.png"
+              alt="stuart"
+            />
+            <div class="meet">
+              <p>
+                <span>m</span>
+                <span>e</span>
+                <span>e</span>
+                <span>t</span>
+              </p>
+              <h2>STUART</h2>
+              <div class="descripcion">
+                <p class="descripcion-p">
+                  Bob is a Minion who is more childish and immature than most of
+                  the other Minions. He is described as a "Little Brother" who
+                  finds love in anything and everything, including a rat (who he
+                  named Poochy) he found in a sewer in the Minions film. He also
+                  enjoys bedtime stories and playing with his favorite stuffed
+                  teddy bear, Tim.
+                </p>
+              </div>
+              <div class="meet-interview">
+                <img
+                  src="./images/play-yellow.svg"
+                  class="play-interview"
+                  alt="ver entrevista minion"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="minions scenes">
+          <div class="div-scenes">
+            <div class="screenshot scene-1">
+              <img class="screenshot-1" src="images/scene-2.jpg" alt="" />
+            </div>
+            <div class="screenshot scene-2">
+              <img class="screenshot-2" src="images/scene-3.jpg" alt="" />
+            </div>
+            <div class="screenshot scene-3">
+              <img class="screenshot-3" src="images/scene-1.gif" alt="" />
+            </div>
+            <div class="screenshot scene-4">
+              <img class="screenshot-4" src="images/scene-4.jpg" alt="" />
+            </div>
+            <div class="screenshot scene-5">
+              <img class="screenshot-5" src="images/scene-7.gif" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section class="text-final">
+          <div class="texto-enjoy">
+            <p class="july">JULY 10</p>
+            <div class="enjoy">
+              <span>E</span>
+              <span>N</span>
+              <span>J</span>
+              <span>O</span>
+              <span>Y</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="banners">
+          <div class="banner-1"></div>
+          <div class="banner-2"></div>
+          <div class="banner-3"></div>
+          <div class="banner-4"></div>
+        </section>
+
+        <footer>
+          <div class="back-to-top">
+            <img
+              class="back-to-top-image"
+              src="./images/back-to-top.png"
+              alt=""
+            />
+          </div>
+        </footer>
+      </main>
+      <div class="cursor"></div>
+    </section>
     <script src="./src/main.js" type="module"></script>
   </body>
 </html>
