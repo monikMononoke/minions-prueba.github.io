@@ -4,6 +4,7 @@ import { handlerDesplegarMenu } from "./menuDesplegado.js";
 import { backToTop } from "./backToTop.js";
 import { showMinions } from "./showMinions.js";
 import { editCursor } from "./customCursor.js";
+import { escucharMinions } from "./soundsMinions.js";
 
 const myAtropos = Atropos({
   el: ".my-atropos",
@@ -17,3 +18,4 @@ window.addEventListener("mousemove", editCursor);
 showMinions();
 handlerDesplegarMenu();
 backToTop();
+escucharMinions();

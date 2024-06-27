@@ -405,15 +405,90 @@ section.section-rigth {
 }
 
 .minion-image.bob:hover {
-  animation: rotate 2s linear 1;
+  animation: rotate 1.5s 1 linear;
 }
 
 @keyframes rotate {
-  from {
+  0% {
     transform: rotate(0) scale(1);
   }
-  to {
-    transform: rotate(360deg) scale(0);
+  50% {
+    transform: rotateZ(180deg) scale(0.7);
+    transform-style: preserve-3d;
+  }
+  100% {
+    transform: rotateZ(360deg) scale(0.7);
+    transform-style: preserve-3d;
+  }
+}
+
+.minion-image.dave:hover {
+  animation: bouncing 0.4s 4 ease-in alternate;
+}
+
+@keyframes bouncing {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.minion-image.stuart:hover {
+  animation: catching-banana 1s 1 ease-out;
+}
+
+@keyframes catching-banana {
+  0% {
+    transform: translateY(-20%) scale(1);
+  }
+  50% {
+    transform: translateY(-50%) scale(0.5);
+  }
+  100% {
+    transform: translateY(0%) scale(1);
+  }
+}
+
+.minion-image.phil:hover {
+  animation: dance 1.5s 1 ease-in-out;
+}
+
+@keyframes dance {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(20deg) scale(0.9);
+  }
+  75% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.minion-image.carl:hover {
+  animation: scaleCarl 1.5s 1 linear;
+}
+
+@keyframes scaleCarl {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(0.4);
+  }
+  100% {
+    transform: scale(0.9);
   }
 }
 
@@ -491,6 +566,22 @@ section.section-rigth {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.meet-interview:hover {
+  animation: scaleButton 1s 1 linear;
+}
+
+@keyframes scaleButton {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .right .meet > .meet-interview {
