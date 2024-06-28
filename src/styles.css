@@ -1021,7 +1021,6 @@ section.section-rigth {
 
   .hero-image {
     width: 700px;
-    flex-shrink: 2;
   }
 
   .rubik-h1 {
@@ -1058,6 +1057,10 @@ section.section-rigth {
     max-width: fit-content;
   }
 
+  .meet {
+    width: 70%;
+  }
+
   .minions.scenes {
     height: 140vh;
     margin-top: 100px;
@@ -1065,7 +1068,7 @@ section.section-rigth {
   }
 
   .screenshot > img {
-    width: 400px;
+    width: 450px;
     height: auto;
     border: 10px solid white;
   }
@@ -1081,129 +1084,6 @@ section.section-rigth {
   }
   .scene-5 {
     top: 820px;
-  }
-
-  .july {
-    font-size: 60px;
-  }
-
-  .enjoy span {
-    font-size: 140px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .logo {
-    height: 40px;
-  }
-
-  .bar-1,
-  .bar-2,
-  .bar-3 {
-    width: 40px;
-    height: 4px;
-  }
-
-  .menu__icon {
-    right: 1rem;
-    top: 1.4rem;
-  }
-
-  .hidden-image {
-    height: 35px;
-  }
-
-  ul.lista {
-    padding: 0;
-    padding-top: 3rem;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .lista-menu > ul > li {
-    font-size: 18px;
-    padding: 12px;
-    border-radius: 18px;
-  }
-
-  .lista-menu ul li:nth-child(1) {
-    transform: translateY(0);
-  }
-  .lista-menu ul li:nth-child(3) {
-    transform: translateY(0);
-  }
-  .lista-menu ul li:nth-child(6) {
-    transform: translateY(0);
-  }
-
-  .atropos {
-    height: 100vh;
-    top: 30vh;
-    width: 100%;
-  }
-
-  .hero-image {
-    width: 100%;
-  }
-
-  h1.rubik-h1 span {
-    font-size: 80px;
-    margin-top: 6rem;
-  }
-
-  .video-frame {
-    width: 400px;
-    height: 220px;
-  }
-
-  .texto-video p {
-    width: 80%;
-  }
-
-  section#kevin {
-    margin-top: -400px;
-    padding-top: 250px;
-  }
-
-  .meet {
-    width: 70%;
-  }
-
-  .minion-image.bob {
-    height: 360px;
-  }
-
-  .minions.scenes {
-    height: 120vh;
-    margin-top: 100px;
-    margin-bottom: 0;
-  }
-
-  .div-scenes {
-    object-fit: contain;
-  }
-
-  .screenshot > img {
-    width: 300px;
-    height: auto;
-    border: 6px solid white;
-  }
-
-  .scene-2 {
-    top: 150px;
-  }
-  .scene-3 {
-    top: 280px;
-  }
-  .scene-4 {
-    top: 400px;
-  }
-  .scene-5 {
-    top: 600px;
   }
 
   .screenshot-1,
@@ -1337,6 +1217,131 @@ section.section-rigth {
       z-index: 2;
       transform: translateX(0px);
     }
+  }
+
+  .july {
+    font-size: 60px;
+  }
+
+  .enjoy span {
+    font-size: 140px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero-image {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    height: 40px;
+  }
+
+  .bar-1,
+  .bar-2,
+  .bar-3 {
+    width: 40px;
+    height: 4px;
+  }
+
+  .menu__icon {
+    right: 1rem;
+    top: 1.4rem;
+  }
+
+  .hidden-image {
+    height: 35px;
+  }
+
+  ul.lista {
+    padding: 0;
+    padding-top: 3rem;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .lista-menu > ul > li {
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .lista-menu ul li:nth-child(1) {
+    transform: translateY(0);
+  }
+  .lista-menu ul li:nth-child(3) {
+    transform: translateY(0);
+  }
+  .lista-menu ul li:nth-child(6) {
+    transform: translateY(0);
+  }
+
+  .atropos {
+    height: 100vh;
+    top: 30vh;
+    width: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  h1.rubik-h1 span {
+    font-size: 80px;
+    margin-top: 6rem;
+  }
+
+  .video-frame {
+    width: 400px;
+    height: 220px;
+  }
+
+  .texto-video p {
+    width: 80%;
+  }
+
+  section#kevin {
+    margin-top: -400px;
+    padding-top: 250px;
+  }
+
+  .minion-image.bob {
+    height: 360px;
+  }
+
+  .minions.scenes {
+    height: 120vh;
+    margin-top: 100px;
+    margin-bottom: 0;
+  }
+
+  .div-scenes {
+    object-fit: contain;
+  }
+
+  .screenshot > img {
+    width: 300px;
+    height: auto;
+    border: 6px solid white;
+  }
+
+  .scene-2 {
+    top: 150px;
+  }
+  .scene-3 {
+    top: 280px;
+  }
+  .scene-4 {
+    top: 400px;
+  }
+  .scene-5 {
+    top: 600px;
   }
 
   .text-final {
