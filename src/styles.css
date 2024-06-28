@@ -62,8 +62,6 @@ body {
   position: absolute;
   left: 0;
   width: 100%;
-  padding-right: 3rem;
-  padding-left: 4rem;
   z-index: 99;
 }
 
@@ -598,7 +596,6 @@ section.section-rigth {
 
 .minions.scenes {
   height: 160vh;
-  position: relative;
   margin-top: 150px;
   margin-bottom: 100px;
 }
@@ -874,4 +871,306 @@ section.section-rigth {
 
 .back-to-top-image {
   height: 150px;
+}
+
+@media screen and (max-width: 1400px) {
+  .wrapper {
+    margin: 0;
+    padding: 0;
+  }
+  .main {
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .main {
+    display: flex;
+  }
+
+  .hero-image {
+    width: 800px;
+  }
+
+  h1.rubik-h1 > span {
+    height: 100px;
+  }
+  h1.rubik-h1 {
+    top: 2rem;
+  }
+
+  .hidden {
+    height: 40px;
+  }
+
+  .menu {
+    padding: 0;
+    top: 3rem;
+  }
+
+  .lista-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .lista-menu ul li {
+    font-size: 24px;
+  }
+
+  .video-frame {
+    width: 600px;
+    height: 400px;
+  }
+
+  section {
+    height: auto;
+    width: 100%;
+  }
+
+  .minion {
+    width: 90%;
+  }
+  .minion-image {
+    height: 450px;
+  }
+
+  .minion-image.bob {
+    height: 400px;
+  }
+  .minion-image.kevin {
+    height: 500px;
+  }
+  .minion-image.stuart {
+    height: 650px;
+  }
+  .meet {
+    width: 40%;
+  }
+
+  .descripcion {
+    margin-top: 20px;
+  }
+  .meet-interview {
+    margin-top: 20px;
+    height: 100px;
+    width: 100px;
+  }
+  .screenshot > img {
+    width: 500px;
+    height: auto;
+    border: 10px solid white;
+  }
+
+  .screenshot.scene-1:hover {
+    animation: animationGru 1.5s 1 linear;
+  }
+
+  @keyframes animationGru {
+    0% {
+      z-index: 1;
+      scale: 1;
+      transform: translateX(0);
+    }
+    5% {
+      z-index: 3;
+    }
+    50% {
+      z-index: 3;
+      scale: 1.2;
+      transform: translateX(50px);
+    }
+    100% {
+      z-index: 1;
+      scale: 1;
+      transform: translateX(0);
+    }
+  }
+  .minions.scenes {
+    margin-top: 0;
+  }
+
+  .scene-1,
+  .scene-3,
+  .scene-4,
+  .scene-5 {
+    transform: translateX(0);
+  }
+
+  .scene-2 {
+    transform: translateX(-20px);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    cursor: auto;
+  }
+
+  .cursor {
+    display: none;
+  }
+
+  .lista-menu ul li {
+    font-size: 20px;
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .hero-image {
+    width: 700px;
+    flex-shrink: 2;
+  }
+
+  .rubik-h1 {
+    font-size: 140px;
+  }
+
+  h1.rubik-h1 {
+    top: 8rem;
+  }
+
+  section.minions {
+    padding-top: 10vh;
+    height: auto;
+  }
+
+  section.minions#carl {
+    padding-bottom: 100px;
+  }
+  .section-left::before {
+    height: 120%;
+  }
+
+  .minion,
+  .minion.left {
+    position: relative;
+    height: auto;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .minion {
+    max-width: fit-content;
+  }
+
+  .minions.scenes {
+    height: 140vh;
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+
+  .screenshot > img {
+    width: 400px;
+    height: auto;
+    border: 10px solid white;
+  }
+
+  .scene-2 {
+    top: 200px;
+  }
+  .scene-3 {
+    top: 380px;
+  }
+  .scene-4 {
+    top: 550px;
+  }
+  .scene-5 {
+    top: 820px;
+  }
+
+  .july {
+    font-size: 60px;
+  }
+
+  .enjoy span {
+    font-size: 140px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    height: 40px;
+  }
+
+  .bar-1,
+  .bar-2,
+  .bar-3 {
+    width: 40px;
+    height: 4px;
+  }
+
+  .menu__icon {
+    right: 0;
+    top: 1.4rem;
+  }
+
+  .hidden-image {
+    height: 35px;
+  }
+
+  ul.lista {
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .lista-menu > ul > li {
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .hero-image {
+    width: 90%;
+  }
+
+  .atropos {
+    height: 80vh;
+    top: 30vh;
+  }
+
+  h1.rubik-h1 span {
+    font-size: 100px;
+    margin-top: 2rem;
+  }
+
+  .video-frame {
+    width: 400px;
+    height: 220px;
+  }
+  .texto-video p {
+    width: 70%;
+  }
+
+  .meet {
+    width: 70%;
+  }
+
+  .screenshot > img {
+    width: 400px;
+    height: auto;
+    border: 10px solid white;
+  }
+
+  .text-final {
+    margin-bottom: -50px;
+  }
+
+  .july {
+    font-size: 35px;
+  }
+
+  .enjoy span {
+    font-size: 90px;
+  }
+
+  .back-to-top-image {
+    height: 100px;
+  }
 }
