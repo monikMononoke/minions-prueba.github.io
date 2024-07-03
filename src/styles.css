@@ -1,14 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,900;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root {
   --minion-color: #ecc65d;
   --font-family: "Rubik", sans-serif;
+  --p-font-family: "Roboto", sans-serif;
 }
 
 .rubik-h1 {
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -27,12 +35,11 @@ body {
   pointer-events: none;
   position: fixed;
   padding: 1rem;
-  background-color: #4fa0f1;
+  background-color: #f14fd9;
   box-shadow: #1e252d 2px 2px -2px;
   opacity: 0.7;
   border-radius: 50%;
   z-index: 99;
-  mix-blend-mode: difference;
 }
 
 .logo-menu {
@@ -508,6 +515,15 @@ section.section-rigth {
   width: 25%;
 }
 
+.meet-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.meet-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
 .meet-kevin {
   transform: translateY(30%);
 }
@@ -829,6 +845,82 @@ section.section-rigth {
   100% {
     transform: translateX(20%);
   }
+}
+
+.section-memory-game {
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.memory-game {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.carta {
+  height: 120px;
+  width: 120px;
+  border-radius: 16px;
+  background-color: #4583ff;
+}
+
+.img-carta {
+  display: none;
+  height: 100px;
+  width: 100px;
+}
+
+.juego-completado {
+  display: none;
+}
+
+button.start {
+  font-size: 22px;
+  color: white;
+  font-weight: 600;
+  background-color: #4583ff;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+}
+
+button.start:hover {
+  background-color: #4784ff;
+  box-shadow: 2px 2px 2px #070a0e;
+  text-shadow: 1px 1px #070a0e;
+  animation: scaleText 0.5s 2 linear alternate;
+  cursor: none;
+}
+
+@keyframes scaleText {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.carta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.juego-completado {
+  font-family: var(--p-font-family);
+  font-weight: 500;
+  color: #4583ff;
+  text-transform: uppercase;
 }
 
 .text-final {
@@ -1359,6 +1451,25 @@ section.section-rigth {
   }
   .scene-5 {
     top: 600px;
+  }
+
+  .section-memory-game {
+    max-width: 100vw;
+  }
+
+  .memory-game {
+    gap: 6px;
+    max-width: 99vw;
+  }
+
+  .carta {
+    width: 80px;
+    height: 80px;
+  }
+
+  .img-carta {
+    width: 70px;
+    height: 70px;
   }
 
   .text-final {

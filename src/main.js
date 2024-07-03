@@ -5,6 +5,7 @@ import { backToTop } from "./backToTop.js";
 import { showMinions } from "./showMinions.js";
 import { editCursor } from "./customCursor.js";
 import { escucharMinions } from "./soundsMinions.js";
+import { memoryGame } from "./memoryGame.js";
 
 const myAtropos = Atropos({
   el: ".my-atropos",
@@ -19,3 +20,4 @@ showMinions();
 handlerDesplegarMenu();
 backToTop();
 escucharMinions();
+memoryGame();
