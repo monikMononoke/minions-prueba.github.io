@@ -36,11 +36,12 @@ export const memoryGame = () => {
   const botonIniciarPartida = document.querySelector(".start");
   botonIniciarPartida.addEventListener("click", () => {
     iniciarPartida(botonIniciarPartida);
+    botonIniciarPartida.disabled = true;
     volteaCarta();
   });
 };
 
-const iniciarPartida = (botonIniciar) => {
+const iniciarPartida = () => {
   estadoPartida.partidaIniciada = true;
   estadoPartida.primeraCartaVolteada = null;
   estadoPartida.segundaCartaVolteda = null;
@@ -50,8 +51,6 @@ const iniciarPartida = (botonIniciar) => {
   estadoPartida.cartasVueltas = 0;
 
   divsReset();
-
-  botonIniciar.disabled = true;
 };
 
 const divsReset = () => {
@@ -139,29 +138,10 @@ const comprobarSiLaPartidaHaTerminado = () => {
     textoJuegoCompletado.style.display = "block";
     setTimeout(() => {
       resetearCartas();
-      finDeLaPartida();
       textoJuegoCompletado.style.display = "none";
-    }, 4000);
+      iniciarPartida();
+    }, 5000);
   } else {
     resetearCartas();
   }
-};
-
-const finDeLaPartida = () => {
-  if (
-    estadoPartida.partidaIniciada === true &&
-    estadoPartida.parejaEncontrada === arrayImagenes.length
-  ) {
-    empezarUnaNuevaPartida();
-  }
-};
-
-const empezarUnaNuevaPartida = () => {
-  estadoPartida.partidaIniciada = false;
-  estadoPartida.parejaEncontrada = 0;
-
-  divsReset();
-  const botonIniciarPartida = document.querySelector(".start");
-
-  botonIniciarPartida.disabled = false;
 };
