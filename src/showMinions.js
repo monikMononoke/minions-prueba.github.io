@@ -36,7 +36,7 @@ export const showMinions = () =>
       const posicion = section.getBoundingClientRect();
       const imagenAnimada = section.classList.contains("animada");
 
-      if (posicion.top <= 200 && !imagenAnimada) {
+      if (posicion.top <= 250 && !imagenAnimada) {
         imagen.animate(minionsLeft, minionsTiming);
         meet.animate(meetRight, minionsTiming);
         setTimeout(() => {
@@ -57,7 +57,7 @@ export const showMinions = () =>
       const posicion = section.getBoundingClientRect();
       const imagenAnimada = section.classList.contains("animada");
 
-      if (posicion.top <= 200 && !imagenAnimada) {
+      if (posicion.top <= 250 && !imagenAnimada) {
         imagen.animate(minionsRight, minionsTiming);
         meet.animate(meetLeft, minionsTiming);
 

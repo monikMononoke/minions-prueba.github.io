@@ -24,19 +24,23 @@ const arrayDuplicado = [...arrayImagenes, ...arrayImagenes];
 const estadoPartida = {
   partidaIniciada: false,
   primeraCartaVolteada: null,
+  segundaCartaVolteda: null,
   cartaA: null,
   cartaB: null,
-  segundaCartaVolteda: null,
   parejaEncontrada: 0,
   cartasVueltas: 0,
   totalParejas: arrayImagenes.length,
+  contador: 0,
 };
 
 export const memoryGame = () => {
   const botonIniciarPartida = document.querySelector(".start");
   botonIniciarPartida.addEventListener("click", () => {
+    const contador = document.querySelector(".contador");
+    contador.style.display = "block";
+    botonIniciarPartida.style.display = "none";
+
     iniciarPartida(botonIniciarPartida);
-    botonIniciarPartida.disabled = true;
     volteaCarta();
   });
 };
@@ -49,11 +53,11 @@ const iniciarPartida = () => {
   estadoPartida.cartaB = null;
   estadoPartida.parejaEncontrada = 0;
   estadoPartida.cartasVueltas = 0;
-
-  divsReset();
+  estadoPartida.contador = 0;
+  restearDivs();
 };
 
-const divsReset = () => {
+const restearDivs = () => {
   elementosDiv.forEach((div) => {
     const img = div.querySelector("img");
     img.src = "";
@@ -61,9 +65,14 @@ const divsReset = () => {
   });
 };
 
+const divContador = () => {
+  const contador = document.querySelector(".contador");
+  estadoPartida.contador++;
+  contador.innerHTML = `Moves: ${estadoPartida.contador}`;
+};
+
 const volteaCarta = () => {
   const arrayBarajado = barajarArray(arrayDuplicado);
-  console.log(arrayBarajado);
 
   elementosDiv.forEach((div) => {
     div.addEventListener("click", () => {
@@ -73,14 +82,16 @@ const volteaCarta = () => {
       imagen.src = arrayBarajado[idElemento];
       imagen.style.display = "block";
 
+      divContador();
+
       if (estadoPartida.cartasVueltas === 0) {
-        primeraCartaVolteada(`${arrayBarajado[idElemento]}`);
+        voltearPrimeraCarta(`${arrayBarajado[idElemento]}`);
         estadoPartida.cartaA = imagen;
       } else if (estadoPartida.cartasVueltas === 1) {
-        segundaCartaVolteda(`${arrayBarajado[idElemento]}`);
+        voltearSegundaCarta(`${arrayBarajado[idElemento]}`);
         estadoPartida.cartaB = imagen;
 
-        const comprobarSiSonPareja = siSonPareja(
+        const comprobarSiSonPareja = comprobarSiSonIguales(
           estadoPartida.primeraCartaVolteada,
           estadoPartida.segundaCartaVolteda
         );
@@ -95,17 +106,18 @@ const volteaCarta = () => {
   });
 };
 
-const primeraCartaVolteada = (carta) => {
+const voltearPrimeraCarta = (carta) => {
   estadoPartida.primeraCartaVolteada = carta;
   estadoPartida.cartasVueltas++;
 };
 
-const segundaCartaVolteda = (carta) => {
+const voltearSegundaCarta = (carta) => {
   estadoPartida.segundaCartaVolteda = carta;
   estadoPartida.cartasVueltas++;
 };
 
-const siSonPareja = (carta1, carta2) => (carta1 === carta2 ? true : false);
+const comprobarSiSonIguales = (carta1, carta2) =>
+  carta1 === carta2 ? true : false;
 
 const sonPareja = (carta1, carta2) => {
   carta1.style.display = "block";
@@ -126,9 +138,7 @@ const noSonPareja = (carta1, carta2) => {
 
 const resetearCartas = () => {
   estadoPartida.primeraCartaVolteada = null;
-
   estadoPartida.segundaCartaVolteda = null;
-
   estadoPartida.cartasVueltas = 0;
 };
 
@@ -138,8 +148,14 @@ const comprobarSiLaPartidaHaTerminado = () => {
     textoJuegoCompletado.style.display = "block";
     setTimeout(() => {
       resetearCartas();
+      restearDivs();
       textoJuegoCompletado.style.display = "none";
-      iniciarPartida();
+      const contador = document.querySelector(".contador");
+      contador.innerHTML = `Moves: `;
+      contador.style.display = "none";
+      const botonIniciarPartida = document.querySelector(".start");
+      botonIniciarPartida.style.display = "block";
+      estadoPartida.partidaIniciada = false;
     }, 5000);
   } else {
     resetearCartas();
