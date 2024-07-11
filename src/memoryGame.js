@@ -1,15 +1,15 @@
 const arrayImagenes = [
-  "./images/memory/imagen-1.png",
-  "./images/memory/imagen-2.png",
-  "./images/memory/imagen-3.png",
-  "./images/memory/imagen-4.png",
-  "./images/memory/imagen-5.png",
-  "./images/memory/imagen-6.png",
-  "./images/memory/imagen-7.png",
-  "./images/memory/imagen-8.png",
+  './images/memory/imagen-1.png',
+  './images/memory/imagen-2.png',
+  './images/memory/imagen-3.png',
+  './images/memory/imagen-4.png',
+  './images/memory/imagen-5.png',
+  './images/memory/imagen-6.png',
+  './images/memory/imagen-7.png',
+  './images/memory/imagen-8.png',
 ];
 
-const elementosDiv = document.querySelectorAll(".carta");
+const elementosDiv = document.querySelectorAll('.carta');
 
 const barajarArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -34,8 +34,8 @@ const estadoPartida = {
 };
 
 export const memoryGame = () => {
-  const botonIniciarPartida = document.querySelector(".start");
-  botonIniciarPartida.addEventListener("click", () => {
+  const botonIniciarPartida = document.querySelector('.start');
+  botonIniciarPartida.addEventListener('click', () => {
     restearDivs();
     iniciarPartida(botonIniciarPartida);
     iniciarContador();
@@ -44,8 +44,8 @@ export const memoryGame = () => {
 };
 
 const iniciarContador = () => {
-  const contador = document.querySelector(".contador");
-  contador.style.display = "block";
+  const contador = document.querySelector('.contador');
+  contador.style.display = 'block';
 };
 
 const iniciarPartida = (botonIniciarPartida) => {
@@ -57,20 +57,20 @@ const iniciarPartida = (botonIniciarPartida) => {
   estadoPartida.parejaEncontrada = 0;
   estadoPartida.cartasVueltas = 0;
   estadoPartida.contador = 0;
-  botonIniciarPartida.style.display = "none";
+  botonIniciarPartida.style.display = 'none';
   botonIniciarPartida.disabled = true;
 };
 
 const restearDivs = () => {
   elementosDiv.forEach((div) => {
-    const img = div.querySelector("img");
-    img.src = "";
-    img.style.display = "none";
+    const img = div.querySelector('img');
+    img.src = '';
+    img.style.display = 'none';
   });
 };
 
 const divContador = () => {
-  const contador = document.querySelector(".contador");
+  const contador = document.querySelector('.contador');
   estadoPartida.contador++;
   contador.innerHTML = `Moves: ${estadoPartida.contador}`;
 };
@@ -79,14 +79,14 @@ const volteaCarta = () => {
   const arrayBarajado = barajarArray(arrayDuplicado);
 
   elementosDiv.forEach((div) => {
-    div.addEventListener("click", () => {
+    div.addEventListener('click', () => {
       divContador();
 
-      const idElemento = div.getAttribute("data-id");
-      const imagen = div.querySelector("img");
+      const idElemento = div.getAttribute('data-id');
+      const imagen = div.querySelector('img');
 
       imagen.src = arrayBarajado[idElemento];
-      imagen.style.display = "block";
+      imagen.style.display = 'block';
 
       if (estadoPartida.cartasVueltas === 0) {
         volteaPrimeraCarta(`${arrayBarajado[idElemento]}`);
@@ -124,16 +124,16 @@ const comprobarSiSonIguales = (carta1, carta2) =>
   carta1 === carta2 ? true : false;
 
 const sonPareja = (carta1, carta2) => {
-  carta1.style.display = "block";
-  carta2.style.display = "block";
+  carta1.style.display = 'block';
+  carta2.style.display = 'block';
   estadoPartida.parejaEncontrada++;
   comprobarSiLaPartidaHaTerminado();
 };
 
 const noSonPareja = (carta1, carta2) => {
   setTimeout(() => {
-    carta1.style.display = "none";
-    carta2.style.display = "none";
+    carta1.style.display = 'none';
+    carta2.style.display = 'none';
     carta1 = null;
     carta2 = null;
     resetearCartas();
@@ -142,21 +142,16 @@ const noSonPareja = (carta1, carta2) => {
 
 const comprobarSiLaPartidaHaTerminado = () => {
   if (estadoPartida.parejaEncontrada === estadoPartida.totalParejas) {
-    const textoJuegoCompletado = document.querySelector(".juego-completado");
-    textoJuegoCompletado.style.display = "block";
+    const textoJuegoCompletado = document.querySelector('.juego-completado');
+    textoJuegoCompletado.style.display = 'block';
     setTimeout(() => {
       resetearCartas();
       restearDivs();
       resetarContador();
       iniciarContador();
-      textoJuegoCompletado.style.display = "none";
+      textoJuegoCompletado.style.display = 'none';
       estadoPartida.partidaIniciada = false;
-
-      if (estadoPartida === false) {
-        const botonIniciarPartida = document.querySelector(".start");
-        botonIniciarPartida.style.display = "block";
-      }
-    }, 5000);
+    }, 3000);
   } else {
     resetearCartas();
   }
@@ -170,6 +165,6 @@ const resetearCartas = () => {
 
 const resetarContador = () => {
   estadoPartida.contador = 0;
-  const contador = document.querySelector(".contador");
+  const contador = document.querySelector('.contador');
   contador.innerHTML = `Moves: ${estadoPartida.contador}`;
 };
